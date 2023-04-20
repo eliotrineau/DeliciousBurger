@@ -64,6 +64,8 @@ burgerList.forEach((burger, index) => {
 // Etape 6 
 // Ajouter votre site sur github page et ajouter le lien dans le cours 
 
+/*Test de la création Git*/
+
 // Etape 7 (Bonus)
 // Rendre vos site le plus attractif possible en changeant le style
 
