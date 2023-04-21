@@ -59,7 +59,7 @@ burgerList.forEach((burger, index) => {
 // Etape 5
 // Ajouter des nouveaux burgers dans le fichier data.js
 
-/*J'ai ajouter trois burger*/
+/*J'ai ajouter trois nouveaux burgers*/
 
 // Etape 6 
 // Ajouter votre site sur github page et ajouter le lien dans le cours 
