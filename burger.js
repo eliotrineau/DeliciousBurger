@@ -1,6 +1,5 @@
 import {burgerList} from './data.js'
 
-
 // Voici la liste des burgers (le fichier se trouve dans le dossier data.js)
 console.log('burgerList', burgerList)
 
@@ -10,101 +9,98 @@ console.log('burgerList', burgerList)
 burgerList.forEach((burger, index) => {
     console.log(index, burger.nom)
 })
+
+
 // Etape 2
 // Dans #burger-container afficher le nom des burgers
 
-/* Le code ci-dessous est fonctionnel mais nous ne pouvons pas gérer efficacement la disposition de style avec ce dernier*/ 
-/*
+
 const burgerContainer = document.querySelector("#burger-container");
-
-
+if (location.pathname.endsWith("index.html")) {
 burgerList.forEach((burger) => {
-    burgerContainer.innerHTML += `<p>${burger.nom}</p>`;
-});
-*/
-/* J'ai donc préféré utiliser des classes comme j'ai plusieurs balises <p>*/ 
-const burgerNames = document.querySelectorAll(".burger-name");
+    burgerContainer.innerHTML += 
+    `
+      <a href="#">
+        <div class="bg-[#1F532F] text-center rounded-xl py-2 px-1 text-white">
+          <h2 class="text-center mb-4 text-2xl font-bold">${burger.nom}</h2>
+          <img class="border mb-4 rounded-xl h-full w-64 flex mx-auto" src="${burger.img}">
+          <p class="text-center mb-4 px-8">${burger.description}</p>
+          <p class="mb-4 mt-6 border-y px-6">Les ingrédients :<br><br>${burger.ingredients.join(", ")}</p>
+          <div class="flex justify-center">
+            <p class="bg-green-500 text-white rounded-xl py-1 px-2 text-center" style="font-family: 'Telma', cursive;">${burger.prix}€</p>
+          </div>
+        </div>
+      </a>
+    `;
+  });
+}
 
 
-burgerList.forEach((burger, index) => {
-    burgerNames[index].innerHTML = burger.nom;
-});
 
+const burgerMenuContainer = document.querySelector("#burgerMenu-container");
+if (location.pathname.endsWith('menu.html')) {
+  burgerList.forEach((burger) => {
+    burgerMenuContainer.innerHTML += `
+      <a href="#">
+        <div class="bg-[#1F532F] rounded-xl py-2 px-1 text-center text-white">
+          <h2 class="text-center mb-4 text-2xl font-bold ">${burger.nom}</h2>
+          <div class="flex mx-auto">
+            <img class="border mb-4 rounded-xl h-full self-center w-64 flex mx-auto" src="${burger.img}">
+            <div class="flex-col self-center h-full pr-6 lg:mr-16 lg:-ml-16 ">
+              <img class="border mb-4 h-full rounded-xl lg:w-32 w-64 flex mx-auto" src="${burger.boisson}">
+              <img class="border mb-4 h-full rounded-xl lg:w-32 w-64 flex mx-auto" src="${burger.frites}">
+            </div>
+          </div>
+          <p class="text-center mb-4 px-8">${burger.description}</p>
+          <p class="mb-4 mt-6 border-y px-6">Les ingrédients :<br><br>${burger.ingredients.join(', ')}</p>
+          <div class="flex justify-center">
+            <p class="bg-green-500 text-white rounded-xl py-1 px-2 text-center" style="font-family: 'Telma', cursive;">${burger.prix}€</p>
+          </div>
+        </div>
+      </a>
+    `;
+  });
+}
 
 
 // Etape 3 
 // Ajouter la description et le prix 
-const burgerDescription = document.querySelectorAll(".burger-description");
 
 
-burgerList.forEach((burger, index) => {
-    burgerDescription[index].innerHTML = burger.description;
-});
+//Voir lignes 27, 30, 54 et 57
 
-const burgerPrix = document.querySelectorAll(".burger-prix");
 
-if (location.pathname.endsWith("index.html")) {
-burgerList.forEach((burger, index) => {
-    burgerPrix[index].innerHTML = `${burger.prix} €`;
-});
-}
 // Etape 4 
 // Afficher l'image du burger
-const burgerImg = document.querySelectorAll(".burger-img");
 
 
-burgerList.forEach((burger, index) => {
-    burgerImg[index].src = burger.img;
-});
+//Voir lignes 26 et 48
+
+
 // Etape 5
-// Ajouter des nouveaux burgers dans le fichier data.js
 
-/*J'ai ajouter trois nouveaux burgers*/
+
+/*J'ai ajouter trois nouveaux burgers à voir dans data.js (j'ai aussi modifié leur ordre)*/
 
 // Etape 6 
-// Ajouter votre site sur github page et ajouter le lien dans le cours 
+ 
 
-/*Test de la création Git*/
+//Fait
 
 // Etape 7 (Bonus)
 // Rendre vos site le plus attractif possible en changeant le style
 
-/*Fait*/
-const burgerBoisson = document.querySelectorAll(".burger-boisson");
 
-if (location.pathname.endsWith("menu.html")) {
-burgerList.forEach((burger, index) => {
-    burgerBoisson[index].src = burger.boisson;
-});
-}
-
-const burgerFrites = document.querySelectorAll(".burger-frites");
-
-if (location.pathname.endsWith("menu.html")) {
-burgerList.forEach((burger, index) => {
-    burgerFrites[index].src = burger.frites;
-});
-}
-
-const burgerPrixMenu = document.querySelectorAll(".burger-prixMenu");
-
-if (location.pathname.endsWith("menu.html")) {
-burgerList.forEach((burger, index) => {
-    burgerPrixMenu[index].innerHTML = `${burger.prixMenu} €`;
-});
-}
-
+//Ajout d'un header et d'un footer en html, tailwindcss et ajout du style directement dans le javascript
 
 
 // Vous pouvez remplacer les burgers par d'autre élements (ex: des films, des livres, des jeux vidéos, des personnages, des animaux, etc...)
 
-/*J'ai ajouté la conception d'un menu que je trouvais plus cohérent avec le prolongement de l'exercice*/
-/*Voir dans Menu*/
+//'ai ajouté la conception d'un menu que je trouvais plus cohérent avec le prolongement de l'exercice (Voir Nos menus)
 
 // Etape 8 (Bonus)
 // Afficher la liste des ingrédients
 
-const burgerIngredients = document.querySelectorAll(".burger-ingredients");
-burgerIngredients.forEach((ingredient, index) => {
-  ingredient.innerHTML = `Les ingrédients :<br><br>${burgerList[index].ingredients.join(", ")}`;
-});
+
+//Voir lignes 28 et 55
+
