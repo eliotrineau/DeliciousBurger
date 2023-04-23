@@ -17,6 +17,7 @@ burgerList.forEach((burger, index) => {
 
 const burgerContainer = document.querySelector("#burger-container");
 
+if (location.pathname.endsWith('menu.html')) {
 burgerList.forEach((burger) => {
     burgerContainer.innerHTML += 
     `
@@ -33,7 +34,7 @@ burgerList.forEach((burger) => {
       </a>
     `;
   });
-
+}
 
 
 
