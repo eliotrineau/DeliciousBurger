@@ -16,7 +16,7 @@ const burgerMenuContainer = document.querySelector("#burgerMenu-container");
           <p class="text-center mb-4 px-8">${burger.description}</p>
           <p class="mb-4 mt-6 border-y px-6">Les ingrédients :<br><br>${burger.ingredients.join(', ')}</p>
           <div class="flex justify-center">
-            <p class="bg-green-500 text-white rounded-xl py-1 px-2 text-center" style="font-family: 'Telma', cursive;">${burger.prix}€</p>
+            <p class="bg-green-500 text-white rounded-xl py-1 px-2 text-center" style="font-family: 'Telma', cursive;">${burger.prixMenu}€</p>
           </div>
         </div>
       </a>
