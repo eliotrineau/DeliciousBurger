@@ -17,7 +17,6 @@ burgerList.forEach((burger, index) => {
 
 const burgerContainer = document.querySelector("#burger-container");
 
-
 burgerList.forEach((burger) => {
   burgerContainer.innerHTML += 
   `
@@ -45,14 +44,14 @@ burgerList.forEach((burger) => {
 // Ajouter la description et le prix 
 
 
-//Voir lignes 27, 30, 54 et 57
+//Voir lignes 27, 30
 
 
 // Etape 4 
 // Afficher l'image du burger
 
 
-//Voir lignes 26 et 48
+//Voir lignes 26
 
 
 // Etape 5
@@ -74,11 +73,11 @@ burgerList.forEach((burger) => {
 
 // Vous pouvez remplacer les burgers par d'autre élements (ex: des films, des livres, des jeux vidéos, des personnages, des animaux, etc...)
 
-//'ai ajouté la conception d'un menu que je trouvais plus cohérent avec le prolongement de l'exercice (Voir Nos menus)
+//'ai ajouté la conception d'un menu que je trouvais plus cohérent avec le prolongement de l'exercice (Voir Nos menus) (Code dans burgerMenu.js)
 
 // Etape 8 (Bonus)
 // Afficher la liste des ingrédients
 
 
-//Voir lignes 28 et 55
+//Voir lignes 28
 
