@@ -1,5 +1,14 @@
 import {burgerList} from './data.js'
 
+
+console.log('burgerList', burgerList)
+
+
+
+burgerList.forEach((burger, index) => {
+    console.log(index, burger.nom)
+})
+
 const burgerMenuContainer = document.querySelector("#burgerMenu-container");
   burgerList.forEach((burger) => {
     burgerMenuContainer.innerHTML += `
