@@ -1,5 +1,5 @@
 
-
+/*
 const burgerList = [{
     "nom": "Classic Cheeseburger",
     "description": "Un burger classique garni d'un steak haché juteux, de fromage cheddar fondu, de laitue, de tomates et de cornichons, le tout enveloppé dans un pain à hamburger moelleux et grillé.",
@@ -18,7 +18,7 @@ const burgerList = [{
     "boisson": "assets/SVG/cocaCola.svg",
     "frites": "assets/SVG/frites.svg",
     "img": "assets/SVG/doublecheese.svg",
-    "ingredients": ["steack","cheddar","cornichon","oignon","tomate","reblochon","pain à hamburger","ketchup"]
+    "ingredients": ["steack","cheddar","cornichons","oignons","tomates","reblochon","pain à hamburger","ketchup"]
     }, 
     {
     "nom": "Coqto Burger",
@@ -28,7 +28,7 @@ const burgerList = [{
     "boisson": "assets/SVG/cocaCola.svg",
     "frites": "assets/SVG/frites.svg",
     "img": "https://images.radio-canada.ca/v1/alimentation/recette/1x1/burger-poulet-croustillant.jpg",
-    "ingredients": ["pain","steack","tomate","salade","reblochon","pain moelleux"] 
+    "ingredients": ["steack","tomates","salade","reblochon","pain moelleux"] 
     },      
     {
     "nom": "BBQ Bacon Burger",
@@ -64,4 +64,4 @@ const burgerList = [{
 
 ]
 
-export {burgerList} 
+export {burgerList} */
