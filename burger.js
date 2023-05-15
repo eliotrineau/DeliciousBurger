@@ -1,41 +1,3 @@
-/*
-// Voici la liste des burgers (le fichier se trouve dans le dossier data.js)
-console.log('burgerList', burgerList)
-
-
-// Etape 1
-// Pour chacun des burgers affiche le nom dans la console
-burgerList.forEach((burger, index) => {
-    console.log(index, burger.nom)
-})
-
-
-// Etape 2
-// Dans #burger-container afficher le nom des burgers
-
-
-const burgerContainer = document.querySelector("#burger-container");
-
-burgerList.forEach((burger) => {
-  burgerContainer.innerHTML += 
-  `
-    <a href="#">
-      <div class="bg-[#1F532F] text-center rounded-xl py-2 px-1 text-white">
-        <h2 class="text-center mb-4 text-2xl font-bold">${burger.nom}</h2>
-        <img class="border mb-4 rounded-xl h-full w-64 flex mx-auto" src="${burger.img}">
-        <p class="text-center mb-4 px-8">${burger.description}</p>
-        <p class="mb-4 mt-6 border-y px-6">Les ingrédients :<br><br>${burger.ingredients.join(", ")}</p>
-        <div class="flex justify-center">
-          <p class="bg-green-500 text-white rounded-xl py-1 px-2 text-center" style="font-family: 'Telma', cursive;">${burger.prix}€</p>
-        </div>
-      </div>
-    </a>
-  `;
-});
-*/
-
-
-
 //import de firebase 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
 import { getFirestore, collection, addDoc, updateDoc, deleteDoc, setDoc, getDoc, where, writeBatch, query, orderBy, doc, limit, getDocs } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
@@ -63,7 +25,17 @@ const getDocument = async (collectionName) => {
 
 const afficherBurgers = async () => {
   const burgerList = await getDocument("BurgerList");
+
+  // Etape 1
+  // Pour chacun des burgers affiche le nom dans la console
+  burgerList.forEach((burger, index) => {
+    console.log(index, burger.nom)
+  }) 
+
   console.log(burgerList);
+
+  // Etape 2
+  // Dans #burger-container afficher le nom des burgers
   const burgerContainer = document.querySelector("#burger-container");
   console.log(typeof(burgerContainer))
   burgerList.forEach((burger)=>{
@@ -92,20 +64,20 @@ afficherBurgers();
 // Ajouter la description et le prix 
 
 
-//Voir lignes 27, 30
+//Voir lignes 51, 48
 
 
 // Etape 4 
 // Afficher l'image du burger
 
 
-//Voir lignes 26
+//Voir lignes 47
 
 
 // Etape 5
 
 
-/*J'ai ajouter trois nouveaux burgers à voir dans data.js (j'ai aussi modifié leur ordre)*/
+/*J'ai ajouter trois nouveaux burgers à voir dans dans la console (j'ai aussi modifié leur ordre)*/
 
 // Etape 6 
  
@@ -127,5 +99,5 @@ afficherBurgers();
 // Afficher la liste des ingrédients
 
 
-//Voir lignes 28
+//Voir lignes 49
 
